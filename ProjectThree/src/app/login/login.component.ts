@@ -12,7 +12,7 @@ export class LoginComponent {
   pass: string = '';
 
   constructor(private UserService: UserService){
-    this.login  = this.UserService.user.larry;
+    this.login = this.UserService.user.loginname;
     this.pass = this.UserService.user.password;
   }
 }
