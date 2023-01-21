@@ -24,27 +24,27 @@ public class AircraftController {
 	private AircraftService service;
 	
 	@GetMapping
-//	@RequestMapping(value="/Aircraft", method = RequestMethod.GET)
+    @RequestMapping(value="/Aircraft", method = RequestMethod.GET)
 	public @ResponseBody Iterable<Aircraft> findAll() {
 		System.out.println("inside findall");
 		
 		return service.findAll();
 	}
 	@PutMapping
-//	@RequestMapping(value="/Aircraft", method = RequestMethod.PUT)
+    @RequestMapping(value="/Aircraft", method = RequestMethod.PUT)
 	public @ResponseBody Aircraft update(Aircraft aircraft) {
 	System.out.println("inside update");
 	return service.update(aircraft);
 	}
 	@PostMapping
-//	@RequestMapping(value="/Aircraft", method = RequestMethod.POST)
+    @RequestMapping(value="/Aircraft", method = RequestMethod.POST)
 	@ResponseStatus(HttpStatus.CREATED)
 	public @ResponseBody Aircraft save(Aircraft aircraft) {
 	System.out.println("inside save");
 	return service.save(aircraft);
 	}
 	@DeleteMapping
-//	@RequestMapping(value="/Aircraft", method = RequestMethod.DELETE)
+    @RequestMapping(value="/Aircraft", method = RequestMethod.DELETE)
 	@ResponseStatus(HttpStatus.NO_CONTENT)
 	public @ResponseBody void delete(Aircraft aircraft) {
 	System.out.println("inside deleteById");
@@ -52,7 +52,7 @@ public class AircraftController {
 	}
 	@GetMapping("/{id}")
 	public @ResponseBody Aircraft findById(@PathVariable int id) {
-		System.out.println("inside findById");
-		return null;
+		System.out.println("finding by Id");
+		return service.findById(id);
 	}
 }

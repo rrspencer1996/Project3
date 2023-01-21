@@ -52,8 +52,8 @@ public class InventoryController {
 	}
 	@GetMapping("/{id}")
 	public @ResponseBody Inventory findById(@PathVariable int id) {
-		System.out.println("inside findById");
-		return null;
+		System.out.println("finding by Id");
+		return service.findById(id);
 	}
 	
 	

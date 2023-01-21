@@ -52,6 +52,6 @@ public class ProductController {
 	@GetMapping("/{id}")
 	public @ResponseBody Product findById(@PathVariable int id) {
 		System.out.println("inside findById");
-		return null;
+		return service.findById(id);
 	}
 }

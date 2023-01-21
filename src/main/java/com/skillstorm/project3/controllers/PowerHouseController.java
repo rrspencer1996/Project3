@@ -56,7 +56,7 @@ public class PowerHouseController {
 		@GetMapping("/{id}")
 		public @ResponseBody WhareHouse findById(@PathVariable int id) {
 			System.out.println("inside findById");
-			return null;
+			return service.findById(id);
 		}
 		
 //		@GetMapping
